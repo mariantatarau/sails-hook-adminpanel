@@ -49,7 +49,7 @@ module.exports = function(req, res) {
                             message: err.message || 'Record was not removed'
                         });
                     }
-                    req.flash('adminError', err.message || 'Record was not removed');
+                    //req.flash('adminError', err.message || 'Record was not removed');
                     return res.redirect(instance.uri);
                 }
                 if (req.wantsJSON) {
@@ -58,7 +58,7 @@ module.exports = function(req, res) {
                         message: 'Record was removed successfuly'
                     });
                 }
-                req.flash('adminSuccess', 'Record was removed successfuly');
+                //req.flash('adminSuccess', 'Record was removed successfuly');
                 res.redirect(instance.uri);
             });
         });
